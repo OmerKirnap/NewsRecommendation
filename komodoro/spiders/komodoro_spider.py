@@ -3,6 +3,8 @@ from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors import LinkExtractor
 from pyquery import PyQuery as pq
 import scrapy
+
+
 class KomodoroItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -12,7 +14,8 @@ class KomodoroItem(scrapy.Item):
     news_summary = scrapy.Field()
     news_text = scrapy.Field()
     news_date = scrapy.Field()
-    
+
+
 class KomodoroSpider(CrawlSpider):
     name = "hurriyet_demo"
     allowed_domains = ["hurriyet.com.tr"]
